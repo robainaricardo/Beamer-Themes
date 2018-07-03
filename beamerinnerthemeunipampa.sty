@@ -1,17 +1,22 @@
 \mode<presentation>
 
+
+
+
 \setbeamertemplate{background}{
-  \begin{tikzpicture}
-  \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
-  \fill[color=white] (0,0) rectangle (\the\paperwidth,\the\paperheight);
-  \fill[color=verdeUnipampa] (0,0) rectangle(\the\paperwidth,1.9);
-  
-  \ifnum\thepage>1\relax%
-   \fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight); 
-   \includegraphics[scale=0.1]{unipampa.png}
-   \fi
-  \end{tikzpicture}
+	\begin{tikzpicture}
+	\useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+	\fill[color=white] (0,0) rectangle (\the\paperwidth,\the\paperheight);
+	\fill[color=verdeUnipampa] (0,0) rectangle(\the\paperwidth,2.2);
+	
+	\ifnum\thepage>1\relax%
+	\fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight); 
+	\includegraphics[scale=0.1]{unipampa.png}
+	\fi
+	\end{tikzpicture}
 }
+
+
 
 % Title page
 \defbeamertemplate*{title page}{texsx}[1][]
@@ -20,19 +25,23 @@
 	\begin{beamercolorbox}[wd=0cm,leftskip=8cm,sep=0pt,#1]{logo}
 		\includegraphics[scale=0.2]{unipampa.png}
 	\end{beamercolorbox}%
-   	\vskip3cm%
-    \begin{beamercolorbox}[wd=12cm,leftskip=3cm,sep=8pt,#1]{title page header}	
-      \usebeamerfont{title}\inserttitle\par%
-    \end{beamercolorbox}%
-    \vskip1.2cm%
-    \begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{author}
-      \usebeamerfont{author}\insertauthor%
-    \end{beamercolorbox}
-     \vskip0.2cm%
-    \begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{date}
-      \usebeamerfont{author}\insertdate%
-    \end{beamercolorbox}
-  \vfill
+	\vskip3cm%
+	\begin{beamercolorbox}[wd=12cm,leftskip=3cm,sep=8pt,#1]{title page header}	
+		\usebeamerfont{title}\inserttitle\par%
+	\end{beamercolorbox}%
+	\vskip1.0cm%
+	\begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{author}
+		\usebeamerfont{author}\insertauthor%
+	\end{beamercolorbox}
+	\vskip0.1cm%
+	\begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{author}
+		\usebeamerfont{author}\insertinstitute%
+	\end{beamercolorbox}
+	\vskip0.1cm%
+	\begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{date}
+		\usebeamerfont{author}\insertdate%
+	\end{beamercolorbox}
+	\vfill
 }
 
 \mode
