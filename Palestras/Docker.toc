@@ -1,0 +1,5 @@
+\babel@toc {portuguese}{}
+\beamer@sectionintoc {1}{Introdu\IeC {\c c}\IeC {\~a}o}{4}{0}{1}
+\beamer@sectionintoc {2}{Conteiners X VM}{5}{0}{2}
+\beamer@sectionintoc {3}{Casos de Uso}{6}{0}{3}
+\beamer@sectionintoc {4}{Exemplo pr\IeC {\'a}tico}{7}{0}{4}

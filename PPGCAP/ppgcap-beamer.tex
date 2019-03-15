@@ -1,0 +1,240 @@
+%*********************************************************
+% PPGCAP Beamer
+% Modelo desenvolvido para: 
+%	Programa de Pós-Graduação em Computação Aplicada (PPGCAP)
+% 
+% Autor: Ricardo Robaina <ricardorobiana11@gmail.com>
+%
+%*********************************************************
+
+%#####################################################################
+%#####################################################################
+%##########					Template						##########
+%#####################################################################
+%#####################################################################
+
+% Tipo de documento
+\documentclass[aspectratio=1610]{beamer}
+
+% Tipo de Fonte
+\usefonttheme{structurebold}
+
+% Pacotes para Pt-Br
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel} 
+
+% Pacores necessários
+\RequirePackage{tikz}
+
+% Cores
+\setbeamercolor*{title page header}{fg=black}
+\setbeamercolor*{author}{fg=black}
+\setbeamercolor*{date}{fg=black}
+\setbeamercolor*{item}{fg=black}
+\setbeamercolor*{block}{fg=black}
+\setbeamercolor*{numeroSlide}{fg=black}
+\setbeamercolor{section in toc}{fg=black}
+\setbeamercolor{frametitle}{fg=black}
+
+% Fonte título
+\setbeamerfont*{title}{family=\structurebold, series=\bfseries, size*={25pt}{1pt}}
+
+% Definição do modelo 
+\setbeamertemplate{background}{
+	\begin{tikzpicture}
+		\ifnum\thepage>1\relax%
+			\fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight); 
+			
+			% Imagens de rodapé
+			\includegraphics[scale=0.05]{fig/unipampa.png}
+			\includegraphics[scale=0.05]{fig/embrapa.png}
+		\fi
+	\end{tikzpicture}
+}
+
+% Página de título
+\defbeamertemplate*{title page}{texsx}[1][]{ 
+
+	% Figuras de logo
+	\begin{beamercolorbox}{logo}		
+		\centering
+		\begin{columns}
+			\begin{column}{0.5\textwidth}
+				\includegraphics[scale=0.1]{fig/unipampa.png}
+			\end{column}
+			\begin{column}{0.5\textwidth}  %%<--- here
+				\begin{flushright}
+					\includegraphics[scale=0.1]{fig/embrapa.png}
+				\end{flushright}
+			\end{column}
+		\end{columns}
+	\end{beamercolorbox}%
+	
+	\vskip1cm%
+	
+	% Título do slide
+	\begin{beamercolorbox}{title page header}	
+		\centering
+		\usebeamerfont{title}\inserttitle\par%
+	\end{beamercolorbox}%
+	
+	\vskip0.5cm%
+	
+	% Nome do curso
+	\begin{beamercolorbox}{title page header}	
+		\centering
+		\insertinstitute\par%
+	\end{beamercolorbox}%
+
+	\vskip0.5cm%
+	
+	% Nome do autor
+	\begin{beamercolorbox}{title page header}	
+		\centering
+		\insertauthor\par%
+	\end{beamercolorbox}%
+
+	\vskip1cm%
+	
+	% Data
+	\begin{beamercolorbox}{title page header}	
+		\centering
+		\insertdate\par%
+	\end{beamercolorbox}%
+	
+	\vfill
+}
+
+
+% Tipos de alertas
+\setbeamertemplate{navigation symbols}{}
+\defbeamertemplateparent{blocks}[bordered]{block begin,block end,%
+	block alerted begin,block alerted end,%
+	block example begin,block example end}
+
+% Items
+\setbeamertemplate{items}[square]
+\setbeamertemplate{sections/subsections in toc}[square]
+
+% Número dos slides
+\setbeamertemplate{footline}
+{\begin{beamercolorbox}[sep=1ex]{numeroSlide}
+		\hfill\llap{{\large \insertframenumber}}%
+	\end{beamercolorbox}%
+}
+
+%#####################################################################
+%#####################################################################
+%##########					Documento						##########
+%#####################################################################
+%#####################################################################
+
+% Dados da apresentação
+\institute{Programa de Pós-Graduação em Computação Aplicada (PPGCAP)}
+\author{Ricardo Robaina}
+\title{Modelo Beamer: Programa de Pós-Graduação em Computação Aplicada (PPGCAP)}
+\date{\today}
+
+
+\begin{document}
+	
+	% Página de título
+	\begin{frame}{}
+		\titlepage
+		\thispagestyle{empty}
+	\end{frame}
+	
+	% Página de sumário
+	\begin{frame}{Sumário}
+		\setbeamertemplate{section in toc}[sections numbered]
+		\tableofcontents[hideallsubsections]
+	\end{frame}
+
+
+% Conteúdo da apresentação 
+
+	\section{Introdução}
+	
+	\begin{frame}{Introdução}
+	
+		Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+	
+		\begin{itemize}
+			\item Blá
+			\item Blá
+			\item Blá
+		\end{itemize}
+	
+	\end{frame}
+
+
+	\section{Blocos}
+	
+	\begin{frame}{Blocos}
+	
+		\begin{block}{Bloco Padrão}
+			\begin{itemize}
+				\item Item
+				\item Item
+			\end{itemize}
+		\end{block}
+
+		\pause
+
+		\begin{exampleblock}{Bloco de Exemplo}
+			\begin{itemize}
+				\item Item
+				\item Item
+			\end{itemize}
+		\end{exampleblock}
+	
+		\pause
+
+		\begin{alertblock}{Bloco de Alerta}
+			\begin{itemize}
+				\item Item
+				\item Item
+			\end{itemize}
+		\end{alertblock}
+
+	\end{frame}
+
+
+	\section{Figuras}
+	
+	\begin{frame}{Figura}
+		
+		\begin{figure}[!htb]
+			\centering
+			\includegraphics[width=1\textwidth]{fig/unipampa.png}
+		\end{figure}
+	
+	\end{frame}
+
+
+	\section{Colunas}
+	
+	\begin{frame}{Colunas}
+	
+	\begin{columns}
+		
+		\begin{column}{0.5\textwidth}
+			some text here some text here some text here some text here some text here
+		\end{column}
+	
+		\begin{column}{0.5\textwidth}  %%<--- here
+			some text here some text here some text here some text here some text here
+			some text here some text here some text here some text here some text here
+			some text here some text here some text here some text here some text here
+			\begin{center}
+				\includegraphics[width=1\textwidth]{fig/embrapa.png}
+			\end{center}
+		\end{column}
+	
+	\end{columns}
+	
+	\end{frame}
+
+
+\end{document}

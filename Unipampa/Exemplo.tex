@@ -1,0 +1,115 @@
+\documentclass{beamer}
+
+\usefonttheme{structurebold}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel} 
+
+
+
+\title{Título do trabalho}
+\date{\today}
+\author{Meu Nome \\ Meu Curso}
+\institute{Universidade Federal do Pampa}
+
+\usetheme{unipampa}
+
+
+
+
+\begin{document}
+	
+	\begin{frame}[noframenumbering]
+		\titlepage
+		\thispagestyle{empty}
+	\end{frame}
+	
+	\begin{frame}{Sumário}
+		\setbeamertemplate{section in toc}[sections numbered]
+		\tableofcontents[hideallsubsections]
+	\end{frame}
+
+\section{Introdução}
+\begin{frame}{Introdução}
+	
+	Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+	
+	\begin{itemize}
+		\item Blá
+		\item Blá
+		\item Blá
+	\end{itemize}
+
+\end{frame}
+
+
+\section{Blocos}
+
+\begin{frame}{Blocos}
+
+	\begin{block}{Bloco Padrão}
+		\begin{itemize}
+			\item Item
+			\item Item
+		\end{itemize}
+	\end{block}
+	
+	
+	\begin{exampleblock}{Bloco de Exemplo}
+		\begin{itemize}
+			\item Item
+			\item Item
+		\end{itemize}
+	\end{exampleblock}
+	
+	\begin{alertblock}{Bloco de Alerta}
+		\begin{itemize}
+			\item Item
+			\item Item
+		\end{itemize}
+	\end{alertblock}
+
+\end{frame}
+
+
+
+\section{Figura}
+
+\begin{frame}{Figura}
+
+	\begin{figure}[!htb]
+		\centering
+		\includegraphics[scale=.45]{unipampa.png}
+	\end{figure}
+
+\end{frame}
+
+
+
+
+\section{Colunas}
+\begin{frame}{Colunas}
+
+\begin{columns}
+	\begin{column}{0.5\textwidth}
+		some text here some text here some text here some text here some text here
+	\end{column}
+	\begin{column}{0.5\textwidth}  %%<--- here
+		some text here some text here some text here some text here some text here
+		some text here some text here some text here some text here some text here
+		some text here some text here some text here some text here some text here
+		\begin{center}
+			\includegraphics[width=0.5\textwidth]{unipampa.png}
+		\end{center}
+	\end{column}
+\end{columns}
+
+\end{frame}
+
+
+
+
+
+
+\end{document}

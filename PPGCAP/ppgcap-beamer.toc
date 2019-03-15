@@ -1,0 +1,5 @@
+\babel@toc {portuguese}{}
+\beamer@sectionintoc {1}{Introdu\IeC {\c c}\IeC {\~a}o}{3}{0}{1}
+\beamer@sectionintoc {2}{Blocos}{4}{0}{2}
+\beamer@sectionintoc {3}{Figuras}{7}{0}{3}
+\beamer@sectionintoc {4}{Colunas}{8}{0}{4}
