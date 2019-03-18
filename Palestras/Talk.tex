@@ -1,0 +1,262 @@
+%*********************************************************
+% Talk Beamer
+% Modelo desenvolvido para: 
+%	As apresentaçãoes de palestras em eventos de tecnologia do autor.
+% 
+% Autor: Ricardo Robaina <ricardorobiana11@gmail.com>
+%
+%*********************************************************
+
+%#####################################################################
+%#####################################################################
+%##########					Template						##########
+%#####################################################################
+%#####################################################################
+
+% Tipo de documento
+\documentclass[aspectratio=1610]{beamer}
+
+% Tipo de Fonte
+\usefonttheme{structurebold}
+
+% Pacotes para Pt-Br
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel} 
+
+% Pacotes de icones web
+\usepackage{fontawesome}
+
+% Pacores necessários
+\RequirePackage{tikz}
+
+% Cores
+\setbeamercolor*{title page header}{fg=black}
+\setbeamercolor*{author}{fg=black}
+\setbeamercolor*{date}{fg=black}
+\setbeamercolor*{item}{fg=black}
+\setbeamercolor*{block}{fg=black}
+\setbeamercolor*{numeroSlide}{fg=black}
+\setbeamercolor{section in toc}{fg=black}
+\setbeamercolor{frametitle}{fg=black}
+
+% Fonte título
+\setbeamerfont*{title}{family=\structurebold, series=\bfseries, size*={25pt}{1pt}}
+ 
+
+%%Iner***********************
+\setbeamertemplate{background}{
+	\begin{tikzpicture}
+	
+	% Figura referente ao evento no rodapé dos slides
+	\ifnum\thepage=1\relax%
+	\fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight); 
+	\includegraphics[scale=0.13]{fig/eventLogo.png}
+	\fi
+	
+	% Figura referente ao evento na página inicial
+	\ifnum\thepage>1\relax%
+	\fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight); 
+	\includegraphics[scale=0.07]{fig/eventLogo.png}
+	\fi
+	\end{tikzpicture}
+}
+
+% Página inicial
+\defbeamertemplate*{title page}{texsx}[1][]
+{ 
+	\vskip0.2cm%
+	
+	% Logo da palestra
+	\begin{beamercolorbox}{logo}
+		\centering
+		\includegraphics[width=0.6\textwidth]{fig/talkLogo.png}
+	\end{beamercolorbox}%
+	
+	\vskip1cm%
+	
+	% Título da palaestra
+	\begin{beamercolorbox}{title page header}	
+		\centering
+		\usebeamerfont{title}\inserttitle\par%
+	\end{beamercolorbox}%
+
+	\vskip0.3cm
+
+	\begin{beamercolorbox}{title page header}	
+		\centering
+		\insertauthor\par%
+	\end{beamercolorbox}%
+	
+	\vskip0.2cm%
+	
+	% Nome do evento
+	\begin{beamercolorbox}{title page header}	
+		\centering
+		\insertinstitute\par%
+	\end{beamercolorbox}%
+	
+	% Data
+	\begin{beamercolorbox}{title page header}	
+		\centering
+		\insertdate\par%
+	\end{beamercolorbox}%
+	
+	\vfill
+}
+
+%%********************************
+% Requirement
+\RequirePackage{tikz}
+
+% Settings
+%\useinnertheme{tchelinux}
+
+\setbeamertemplate{navigation symbols}{}
+\defbeamertemplateparent{blocks}[bordered]{block begin,block end,%
+	block alerted begin,block alerted end,%
+	block example begin,block example end}
+
+% Items
+\setbeamertemplate{items}[square]
+\setbeamertemplate{sections/subsections in toc}[square]
+
+\setbeamertemplate{footline}
+{\begin{beamercolorbox}[sep=1ex]{numeroSlide}
+		\hfill\llap{\large \insertframenumber}%
+	\end{beamercolorbox}%
+}
+
+
+%%********************************
+
+
+%#####################################################################
+%#####################################################################
+%##########					Documento						##########
+%#####################################################################
+%#####################################################################
+\institute{Nome do Evento (2019)}
+\title{Nome da Minha Palestra de Tecnologia}
+\author{Ricardo Robaina}
+\date{\today}
+
+
+\begin{document}
+	
+	\begin{frame}{}
+		\titlepage
+		\thispagestyle{empty}
+	\end{frame}
+	
+	\begin{frame}{Sumário}
+		\setbeamertemplate{section in toc}[sections numbered]
+		\tableofcontents[hideallsubsections]
+	\end{frame}
+
+	\begin{frame}{Sobre o palestrante}
+	
+		\begin{columns}
+			
+			\begin{column}{0.3\textwidth}
+				\includegraphics[scale = 0.17]{fig/fig_eu.png}
+			\end{column}
+		
+			\begin{column}{0.7\textwidth}  %%<--- here
+				\textbf{\insertauthor}
+				\begin{itemize}
+					\item \faMapMarker \ Bagé
+					\item \faMortarBoard \ Engenharia de Computação (2019)
+					\item \faMortarBoard \ Mestrado em Computação Aplicada (PPGCAP)
+						\begin{itemize}
+							\item \small{\\\\Boslista CAPES}
+						\end{itemize}
+					\item \faLinux \ Voluntário do Tchelinux
+				\end{itemize}
+			\end{column}
+		\end{columns}
+	
+		\\
+		
+		\centering
+		
+		\vskip1cm
+		
+		\textbf{Slides \& Arquivos } \\
+		\faGithub\ \url{https://github.com/robainaricardo/talks}
+	
+		
+	\end{frame}
+
+	\section{Introdução}
+	
+	\begin{frame}{Introdução}
+		
+		Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+		
+		\begin{itemize}
+			\item Blá
+			\item Blá
+			\item Blá
+		\end{itemize}
+	
+	\end{frame}
+
+
+	\section{Blocos}
+	
+	\begin{frame}{Blocos}
+	
+		\begin{block}{Bloco Padrão}
+			\begin{itemize}
+				\item Item
+				\item Item
+			\end{itemize}
+		\end{block}
+		
+		
+		\begin{exampleblock}{Bloco de Exemplo}
+			\begin{itemize}
+				\item Item
+				\item Item
+			\end{itemize}
+		\end{exampleblock}
+		
+		\begin{alertblock}{Bloco de Alerta}
+			\begin{itemize}
+				\item Item
+				\item Item
+			\end{itemize}
+		\end{alertblock}
+	
+	\end{frame}
+
+
+
+	\section{Figuras}
+
+	\begin{frame}{Figura}
+	
+		\begin{figure}[!htb]
+			\centering
+			\includegraphics[scale=.5]{fig/eventLogo.png}
+		\end{figure}
+	
+	\end{frame}
+
+
+	\begin{frame}{Onde me encontrar}
+
+			\centering
+			\includegraphics[scale = 0.15]{fig/fig_eu.png} \\
+			\textbf{Ricardo Robaina} \\
+			\begin{itemize}{  }
+				\item \faEnvelope\ \url{ricardorobaina11@gmail.com}
+				\item \faGithub\ \url{https://github.com/robainaricardo}
+				\item \faLinkedin\ \url{https://www.linkedin.com/in/robainaricardo/}
+				\item \faInstagram\ \href{https://www.instagram.com/robainaricardo/?hl=pt-br}{\url{@robainaricardo}}
+			\end{itemize}
+	
+	\end{frame}
+
+\end{document}
