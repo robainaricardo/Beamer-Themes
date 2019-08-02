@@ -1,15 +1,36 @@
-\documentclass{beamer}
+%*********************************************************
+% Tchelinux Beamer
+% Modelo desenvolvido para: 
+%	O grupo de usaário de software livre Tchelinux.
+% 
+% Autor: Ricardo Robaina <ricardorobiana11@gmail.com>
+%
+%*********************************************************
 
+%#####################################################################
+%#####################################################################
+%##########					Template						##########
+%#####################################################################
+%#####################################################################
+
+% Tipo de documento
+\documentclass[aspectratio=1610]{beamer}
+
+% Tipo de Fonte
 \usefonttheme{structurebold}
 
+% Pacotes para Pt-Br
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[portuguese]{babel} 
 
+% Pacotes de icones web
+%\usepackage{fontawesome}
 
-%%**************cores
-\setbeamerfont*{title}{family=\structurebold, series=\bfseries, size*={30pt}{1pt}}
+% Pacores necessários
+\RequirePackage{tikz}
 
+% Cores
 \setbeamercolor*{title page header}{fg=black}
 \setbeamercolor*{author}{fg=black}
 \setbeamercolor*{date}{fg=black}
@@ -17,17 +38,17 @@
 \setbeamercolor*{block}{fg=black}
 \setbeamercolor*{numeroSlide}{fg=black}
 \setbeamercolor{section in toc}{fg=black}
-
 \setbeamercolor{frametitle}{fg=black}
-%%Iner***********************
+
+% Fonte título
+\setbeamerfont*{title}{family=\structurebold, series=\bfseries, size*={25pt}{1pt}}
 
 \setbeamertemplate{background}{
 	\begin{tikzpicture}
 	
-	
 	\ifnum\thepage>1\relax%
 	\fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight); 
-	\includegraphics[scale=0.08]{logo.png}
+	\includegraphics[scale=0.08]{fig/fig_logo.png}
 	\fi
 	\end{tikzpicture}
 }
@@ -60,8 +81,7 @@
 % Requirement
 \RequirePackage{tikz}
 
-% Settings
-%\useinnertheme{tchelinux}
+
 
 \setbeamertemplate{navigation symbols}{}
 \defbeamertemplateparent{blocks}[bordered]{block begin,block end,%
@@ -82,11 +102,10 @@
 %%********************************
 
 
-\title{Bagé 2018}
+\title{Cidade 2019}
 \date{\today}
 
 
-%%\usetheme{tchelinux}
 
 
 
@@ -103,21 +122,7 @@
 		\tableofcontents[hideallsubsections]
 	\end{frame}
 
-	\begin{frame}{Sobre o palestrante}
 	
-		\begin{columns}
-			\begin{column}{0.5\textwidth}
-				\includegraphics[scale = 0.05]{fig/fig_eu.png}
-			\end{column}
-			\begin{column}{0.5\textwidth}  %%<--- here
-				some text here some text here some text here some text here some text here
-				some text here some text here some text here some text here some text here
-				some text here some text here some text here some text here some text here
-			\end{column}
-		\end{columns}
-		
-	\end{frame}
-
 \section{Introdução}
 \begin{frame}{Introdução}
 	
